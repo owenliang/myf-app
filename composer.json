@@ -1,0 +1,13 @@
+{
+    "name": "myf/app",
+    "description": "my framework app",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "owenliang",
+            "email": "120848369@qq.com"
+        }
+    ],
+    "require": {}
+}
