@@ -16,4 +16,12 @@ return [
             ['^/demo/b/(\d+)$', 'demo', 'b'],
         ],
     ],
+
+    // mysql配置
+
+    // redis配置
+
+    // elasticsearch配置
+
+    // httpclient配置
 ];

@@ -1,4 +1,4 @@
 <head>
     <meta charset="UTF-8">
-    <title><?= $title ?></title>
+    <title><?= \myf\View::encode($title) ?></title>
 </head>
