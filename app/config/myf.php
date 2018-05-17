@@ -9,6 +9,7 @@ return [
         // 静态路由
         'static' => [
             '/demo/a' => ['demo', 'a'],
+            '/' => ['demo', 'c']
         ],
         // pcre正则路由
         'regex' => [
