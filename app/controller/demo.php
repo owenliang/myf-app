@@ -3,6 +3,7 @@ namespace app\controller;
 
 use app\service\TestTable;
 use common\service\base;
+use myf\Redis;
 use myf\View;
 
 class Demo
@@ -31,4 +32,17 @@ class Demo
         TestTable::deleteOne();
     }
 
+    // 访问Redis
+    public function redis()
+    {
+        $m = Redis::master('default');
+        $s = Redis::slave('default');
+
+        $m->set('myf', ' is good');
+        echo 'myf' . $s->get('myf') . PHP_EOL;
+
+        //$c = Redis::cluster('myCluster');
+        //$c->set('myf', ' not bad');
+        //echo 'myf' . $c->get('myf');
+    }
 }

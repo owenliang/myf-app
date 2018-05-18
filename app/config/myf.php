@@ -11,6 +11,7 @@ return [
             '/service' => ['demo', 'service'],
             '/view' => ['demo', 'view'],
             '/mysql' => ['demo', 'mysql'],
+            '/redis' => ['demo', 'redis'],
         ],
         // pcre正则路由
         'regex' => [

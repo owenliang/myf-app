@@ -25,7 +25,42 @@ return [
 
     // redis配置
     'redis' => [
-
+        'default' => [
+            'dbIndex' => 0,
+            'password' => false,
+            'isCluster' => false,
+            'timeout' => 2,
+            'readTimeout' => 2,
+            'master' => [
+                [
+                    'host' => 'localhost',
+                    'port' => 6379,
+                ]
+            ],
+            'slave' => [
+                [
+                    'host' => 'localhost',
+                    'port' => 6379,
+                ]
+            ]
+        ],
+        'myCluster' => [
+            'dbIndex' => 0,
+            'password' => false,
+            'isCluster' => true,
+            'timeout' => 2,
+            'readTimeout' => 2,
+            'master' => [
+                [
+                    'host' => 'localhost',
+                    'port' => 6379,
+                ],
+                [
+                    'host' => 'localhost',
+                    'port' => 6379,
+                ]
+            ],
+        ]
     ],
 
     // elasticsearch配置
