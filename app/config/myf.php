@@ -8,20 +8,13 @@ return [
     'route' => [
         // 静态路由
         'static' => [
-            '/demo/a' => ['demo', 'a'],
-            '/' => ['demo', 'c']
+            '/service' => ['demo', 'service'],
+            '/view' => ['demo', 'view'],
+            '/mysql' => ['demo', 'mysql'],
         ],
         // pcre正则路由
         'regex' => [
-            ['^/demo/b/(\d+)$', 'demo', 'b'],
+            ['^/params/(\d+)$', 'demo', 'params'],
         ],
     ],
-
-    // mysql配置
-
-    // redis配置
-
-    // elasticsearch配置
-
-    // httpclient配置
 ];
