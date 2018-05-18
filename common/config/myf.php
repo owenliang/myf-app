@@ -68,8 +68,9 @@ return [
 
     ],
 
-    // http client配置
+    // http客户端配置
     'http' => [
-
-    ],
+        'connectTimeout' => 1,  // 连接超时1秒
+        'timeout' => 1, // 请求超时1秒
+    ]
 ];

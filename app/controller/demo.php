@@ -3,6 +3,7 @@ namespace app\controller;
 
 use app\service\TestTable;
 use common\service\base;
+use myf\Http;
 use myf\Redis;
 use myf\View;
 
@@ -44,5 +45,12 @@ class Demo
         //$c = Redis::cluster('myCluster');
         //$c->set('myf', ' not bad');
         //echo 'myf' . $c->get('myf');
+    }
+
+    // http客户端
+    public function http()
+    {
+        $ret = Http::post('http://myf.smzdm.com/service', ['a' => 1],  ['b' => 'hello']);
+        echo json_encode($ret);
     }
 }
