@@ -3,9 +3,12 @@ namespace app\controller;
 
 use app\service\TestTable;
 use common\service\base;
+use myf\Elasticsearch;
 use myf\Http;
 use myf\Redis;
 use myf\View;
+use ONGR\ElasticsearchDSL\Query\MatchAllQuery;
+use ONGR\ElasticsearchDSL\Search;
 
 class Demo
 {
@@ -52,5 +55,29 @@ class Demo
     {
         $ret = Http::post('http://myf.com/service', ['a' => 1],  ['b' => 'hello']);
         echo json_encode($ret);
+    }
+
+    // Elasticsearch客户端
+    public function elasticsearch()
+    {
+        $es = Elasticsearch::instance('default');
+
+        $es->index([
+            'index' => 'test',
+            'type' => 'doc',
+            'id' => 1,
+            'body' => [
+                'myf' => ' is good',
+            ]
+        ]);
+
+        $search = new Search();
+        $search->addQuery(new MatchAllQuery());
+        $result = $es->search([
+            'index' => 'test',
+            'type' => 'doc',
+            'body' => $search->toArray(),
+        ]);
+        echo json_encode($result);
     }
 }

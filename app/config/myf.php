@@ -12,7 +12,8 @@ return [
             '/view' => ['Demo', 'view'],
             '/mysql' => ['Demo', 'mysql'],
             '/redis' => ['Demo', 'redis'],
-            '/http' => ['Demo', 'http']
+            '/http' => ['Demo', 'http'],
+            '/elasticsearch' => ['Demo', 'elasticsearch'],
         ],
         // pcre正则路由
         'regex' => [

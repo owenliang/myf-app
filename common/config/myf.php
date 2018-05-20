@@ -49,7 +49,7 @@ return [
             'password' => false,
             'isCluster' => true,
             'timeout' => 2,
-            'readTimeout' => 2,
+            'readTimeout' => 2, // 高版本phpredis支持此选项
             'master' => [
                 [
                     'host' => 'localhost',
@@ -65,7 +65,16 @@ return [
 
     // elasticsearch配置
     'elasticsearch' => [
-
+        'default' => [
+            'hosts' => ['localhost:9200', ],
+            'retries' => 2,
+            'connectionParams' => [
+                'client' => [
+                    'timeout' => 2,
+                    'connect_timeout' => 2,
+                ]
+            ]
+        ]
     ],
 
     // http客户端配置
