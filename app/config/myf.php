@@ -8,15 +8,15 @@ return [
     'route' => [
         // 静态路由
         'static' => [
-            '/service' => ['demo', 'service'],
-            '/view' => ['demo', 'view'],
-            '/mysql' => ['demo', 'mysql'],
-            '/redis' => ['demo', 'redis'],
-            '/http' => ['demo', 'http']
+            '/service' => ['Demo', 'service'],
+            '/view' => ['Demo', 'view'],
+            '/mysql' => ['Demo', 'mysql'],
+            '/redis' => ['Demo', 'redis'],
+            '/http' => ['Demo', 'http']
         ],
         // pcre正则路由
         'regex' => [
-            ['^/params/(\d+)$', 'demo', 'params'],
+            ['^/params/(\d+)$', 'Demo', 'params'],
         ],
     ],
 ];

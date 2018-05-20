@@ -50,7 +50,7 @@ class Demo
     // http客户端
     public function http()
     {
-        $ret = Http::post('http://myf.smzdm.com/service', ['a' => 1],  ['b' => 'hello']);
+        $ret = Http::post('http://myf.com/service', ['a' => 1],  ['b' => 'hello']);
         echo json_encode($ret);
     }
 }
