@@ -15,6 +15,10 @@ myf means 'my framework'
 * 没有IOC容器，namespace本身就是单例
 * 没有框架基类，不绑架开发者习惯，PHP原汁原味
 
+## 使用脚手架
+
+[myf/app](https://packagist.org/packages/myf/app)
+
 ## 组成
 
 ### common\...
@@ -205,3 +209,7 @@ return [
     ]
 ];
 ```
+
+## my-core 框架核心
+
+[框架核心composer library](https://github.com/owenliang/myf-core)
