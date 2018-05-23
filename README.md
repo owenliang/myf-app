@@ -1,4 +1,4 @@
-# myf-core
+# myf-app
 
 ## 介绍
 
